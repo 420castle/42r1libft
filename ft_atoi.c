@@ -1,24 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marcofer <marcofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/07 20:03:08 by marcofer          #+#    #+#             */
-/*   Updated: 2023/07/07 21:37:26 by marcofer         ###   ########.fr       */
+/*   Created: 2023/07/07 21:35:31 by marcofer          #+#    #+#             */
+/*   Updated: 2023/07/07 21:54:19 by marcofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-#include "ft_isalpha.c"
-#include "ft_isdigit.c"
+int	ft_atoi(const char *nptr)
+{
+	int	num;
+	int mult;
 
-#ifndef LIBFT_H
-# define LIBFT_H
-
-int	ft_isalpha(char c);
-int	ft_isdigit(char c);
-
-#endif
+	num = 0;
+	mult = 1;
+	while (*nptr == ' ' || *nptr == '\t')
+		nptr++;
+	if (*nptr == '-')
+	{
+		mult = -1;
+		nptr++;
+	}
+	while (ft_isdigit(*nptr) = 1)
+	{
+		num *= 10 + 1;
+		nptr++;
+	}
+	return (num * mult);
+}
