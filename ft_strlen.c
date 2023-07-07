@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marcofer <marcofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/27 20:03:11 by marcofer          #+#    #+#             */
-/*   Updated: 2023/07/07 20:04:06 by marcofer         ###   ########.fr       */
+/*   Created: 2023/07/07 20:57:05 by marcofer          #+#    #+#             */
+/*   Updated: 2023/07/07 21:02:30 by marcofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(char c)
-{
-	if (c > 64 && c < 91)
-		return (1);
-	if (c > 96 && c < 122)
-		return (1);
-	return (0);
-}
-/*
-#include <stdio.h>
-int	main(void)
-{
-	int	flag;
+#include <stdlib.h>
 
-	flag = ft_isalpha('A');
-	printf("%d\n", flag);
-	return (0);
+size_t	ft_strlen(const char *s)
+{
+	size_t	len;
+
+	len = 0;
+	while (*s != '\0')
+	{
+		len++;
+		s++;
+	}
+	return (len);
 }
-*/
