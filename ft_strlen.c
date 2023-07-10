@@ -6,11 +6,11 @@
 /*   By: marcofer <marcofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/07 20:57:05 by marcofer          #+#    #+#             */
-/*   Updated: 2023/07/07 21:02:30 by marcofer         ###   ########.fr       */
+/*   Updated: 2023/07/10 19:33:50 by marcofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {

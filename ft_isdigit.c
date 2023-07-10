@@ -6,9 +6,11 @@
 /*   By: marcofer <marcofer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/07 19:58:51 by marcofer          #+#    #+#             */
-/*   Updated: 2023/07/07 20:18:15 by marcofer         ###   ########.fr       */
+/*   Updated: 2023/07/10 19:33:43 by marcofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isdigit(char c)
 {
