@@ -6,7 +6,7 @@
 #    By: marcofer <marcofer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/23 12:11:06 by adiaz-be          #+#    #+#              #
-#    Updated: 2023/07/10 19:51:22 by marcofer         ###   ########.fr        #
+#    Updated: 2023/07/10 22:37:17 by marcofer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,7 +51,9 @@ fclean:	clean
 
 re:	fclean all
 
-test: re $(CC_MAIN)
+run: $(NAME) clean
+	$(CC) $(CFLAGS) main.c -o main -L. -lft
+	./main
 
 bonus: $(OBJS) $(BONUS_OBJS)
 	$(AR) $(NAME) $(OBJS)  $(BONUS_OBJS)
