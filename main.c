@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marcofer <marcofer@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marcofer <marcofer@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/07 20:14:50 by marcofer          #+#    #+#             */
-/*   Updated: 2023/07/10 19:41:41 by marcofer         ###   ########.fr       */
+/*   Updated: 2023/07/12 22:04:51 by marcofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	main(void)
 	char	numstr[] = "   +--+-+123 asd";
 
 	// ft_is...
-	printf("ft_is... :\n");
+	printf("ft_is... : \n");
 	printf("\tft_isalpha('1') = 0 ->%d\n", ft_isalpha('1'));
 	printf("\tft_isalpha('e') = 1 ->%d\n", ft_isalpha('e'));
 	printf("\tft_isdigit('1') = 1 ->%d\n", ft_isdigit('1'));
