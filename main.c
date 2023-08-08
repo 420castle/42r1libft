@@ -6,7 +6,7 @@
 /*   By: marcofer <marcofer@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/07 20:14:50 by marcofer          #+#    #+#             */
-/*   Updated: 2023/07/13 17:51:47 by marcofer         ###   ########.fr       */
+/*   Updated: 2023/08/03 13:59:11 by marcofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 #include <ctype.h>
 #include <stdio.h>
+#include <string.h>
+
 int	main(void)
 {
 	// int		flag;
@@ -21,7 +23,7 @@ int	main(void)
 	char	numstr[] = "   +--+-+123 asd";
 
 	// ft_is...
-		printf("ft_is... :\n");
+		printf("\nft_is... :\n");
 		printf("\tisalpha('1') = %d\tft_isalpha('1') = %d -> %s\n", isalpha('1')	,ft_isalpha('1')	,(ft_isalpha('1') == ((isalpha('1') == 0) ? 0 : 1)) ? "OK" : "Error!" );
 		printf("\tisalpha('e') = %d\tft_isalpha('e') = %d -> %s\n" ,isalpha('e')	,ft_isalpha('e')	,(ft_isalpha('e') == ((isalpha('e') == 0) ? 0 : 1)) ? "OK" : "Error!" );
 		printf("\n");
@@ -41,6 +43,10 @@ int	main(void)
 		printf("\tisprint(128) = %d\tft_isprint(128) = %d -> %s\n" ,isprint(128)	,ft_isprint(128)	,(ft_isprint(128) == ((isprint(128) == 0) ? 0 : 1)) ? "OK" : "Error!" );
 		printf("\tisprint(-1)  = %d\tft_isprint(-1)  = %d -> %s\n" ,isprint(-1)		,ft_isprint(-1)		,(ft_isprint(-1)  == ((isprint(-1)  == 0) ? 0 : 1)) ? "OK" : "Error!" );
 
+	// String
+		printf("\nString:\n");
+		printf("\tstrlen('123456789') = %ld\tft_strlen('123456789') = %ld -> %s\n", strlen("123456789")	,ft_strlen("123456789")	,(ft_strlen("123456789") == strlen("123456789")) ? "OK" : "Error!" );
+
 	// Other
 		printf("\nOther:\n");
 		printf("\ttoupper('a') = %c\tft_toupper('a') = %c -> %s\n", toupper('a')	,ft_toupper('a')	,(ft_toupper('a') == toupper('a')) ? "OK" : "Error!" );
@@ -56,6 +62,7 @@ int	main(void)
 		printf("\ttolower('Z') = %c\tft_tolower('Z') = %c -> %s\n", tolower('Z')	,ft_tolower('Z')	,(ft_tolower('Z') == tolower('Z')) ? "OK" : "Error!" );
 		printf("\ttolower('@') = %c\tft_tolower('@') = %c -> %s\n", tolower('@')	,ft_tolower('@')	,(ft_tolower('@') == tolower('@')) ? "OK" : "Error!" );
 		printf("\ttolower('[') = %c\tft_tolower('[') = %c -> %s\n", tolower('[')	,ft_tolower('[')	,(ft_tolower('[') == tolower('[')) ? "OK" : "Error!" );		
+
 
 	// ft_atoi
 		printf("\nft_atoi:\n");
