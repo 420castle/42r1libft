@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: marcofer <marcofer@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/03 14:25:13 by marcofer          #+#    #+#             */
-/*   Updated: 2023/08/03 14:25:13 by marcofer         ###   ########.fr       */
+/*   Created: 2023/06/26 13:02:03 by marcofer          #+#    #+#             */
+/*   Updated: 2023/06/26 13:06:41 by marcofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	ft_memset(s, 0, n);
+	ft_memset(s, '\0', n);
 }

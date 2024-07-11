@@ -5,37 +5,36 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: marcofer <marcofer@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/03 15:20:08 by marcofer          #+#    #+#             */
-/*   Updated: 2023/08/03 15:20:08 by marcofer         ###   ########.fr       */
+/*   Created: 2022/09/24 15:22:14 by marcofer          #+#    #+#             */
+/*   Updated: 2023/06/26 13:55:19 by marcofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	int	i;
 
-	if (!dest && !src)
+	if (!dst && !src)
 		return (NULL);
-	if (dest > src)
+	if (dst > src)
 	{
-		i = (int)n - 1;
+		i = (int)len - 1;
 		while (i >= 0)
 		{
-			*(char *)(dest + i) = *(char *)(src + i);
+			*(char *)(dst + i) = *(char *)(src + i);
 			i--;
 		}
 	}
 	else
 	{
 		i = 0;
-		while (i < (int)n)
+		while (i < (int)len)
 		{
-			*(char *)(dest + i) = *(char *)(src + i);
+			*(char *)(dst + i) = *(char *)(src + i);
 			i++;
 		}
 	}
-	return (dest);
+	return (dst);
 }
-

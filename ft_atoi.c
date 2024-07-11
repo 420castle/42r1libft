@@ -3,35 +3,36 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marcofer <marcofer@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marcofer <marcofer@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/07 21:35:31 by marcofer          #+#    #+#             */
-/*   Updated: 2023/07/10 19:34:57 by marcofer         ###   ########.fr       */
+/*   Created: 2023/06/26 13:02:03 by marcofer          #+#    #+#             */
+/*   Updated: 2023/11/21 16:31:17 by marcofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-// #include "ft_isdigit.c"
 
-int	ft_atoi(const char *nptr)
+long	ft_atoi(const char *str)
 {
-	int	num;
-	int	mult;
+	long	num;
+	int		neg;
+	int		temp;
 
 	num = 0;
-	mult = 1;
-	while (*nptr == ' ' || *nptr == '\t')
-		nptr++;
-	while (*nptr == '-' || *nptr == '+')
+	neg = 1;
+	while ((*str >= 9 && *str <= 13) || *str == 32)
+		str++;
+	if (*str == 43 || *str == 45)
 	{
-		if (*nptr == '-')
-			mult *= -1;
-		nptr++;
+		if (*str == 45)
+			neg *= -1;
+		str++;
 	}
-	while (ft_isdigit(*nptr) == 1)
+	while (*str >= 48 && *str <= 57)
 	{
-		num = num * 10 + (*nptr - '0');
-		nptr++;
+		temp = *str - '0';
+		num = num * 10 + temp;
+		str++;
 	}
-	return (num * mult);
+	return (num * neg);
 }

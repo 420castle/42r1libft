@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: marcofer <marcofer@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/10 18:54:34 by marcofer          #+#    #+#             */
-/*   Updated: 2023/07/12 22:14:01 by marcofer         ###   ########.fr       */
+/*   Created: 2023/06/26 13:02:03 by marcofer          #+#    #+#             */
+/*   Updated: 2023/06/26 13:06:50 by marcofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,5 @@
 
 int	ft_isalnum(int c)
 {
-	if (ft_isalpha(c) == 1 || ft_isdigit(c) == 1)
-		return (1);
-	return (0);
+	return (ft_isalpha(c) || ft_isdigit(c));
 }

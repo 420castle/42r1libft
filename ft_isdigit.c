@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: marcofer <marcofer@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/07 19:58:51 by marcofer          #+#    #+#             */
-/*   Updated: 2023/07/12 22:13:40 by marcofer         ###   ########.fr       */
+/*   Created: 2023/06/26 13:02:03 by marcofer          #+#    #+#             */
+/*   Updated: 2023/06/26 13:07:06 by marcofer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,5 @@
 
 int	ft_isdigit(int c)
 {
-	if (c > 47 && c < 58)
-		return (1);
-	return (0);
+	return (c >= 48 && c <= 57);
 }
-
-/*
-#include <stdio.h>
-int	main(void)
-{
-	int	flag;
-
-	flag = ft_isdigit('d');
-	printf("%d\n", flag);
-	return (0);
-}
-*/

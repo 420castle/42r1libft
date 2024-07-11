@@ -6,13 +6,13 @@
 #    By: marcofer <marcofer@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/23 12:11:06 by adiaz-be          #+#    #+#              #
-#    Updated: 2023/08/01 13:25:58 by marcofer         ###   ########.fr        #
+#    Updated: 2023/12/08 18:12:05 by marcofer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-SRC := $(filter-out main.c, $(wildcard *.c))
+SRC	=	$(wildcard *.c)
 
 OBJS = $(SRC:.c=.o)
 
@@ -32,8 +32,6 @@ CC = gcc
 CFLAGS = -Wall -Werror -Wextra
 RM = rm -rf
 AR = ar crs
-MAIN = main.c
-CC_MAIN = $(CC) $(CFLAGS) $(MAIN) -o main -L. -lft
 
 $(NAME): $(OBJS)
 	$(AR) $@ $^
@@ -50,10 +48,6 @@ fclean:	clean
 	$(RM) $(NAME)		
 
 re:	fclean all
-
-run: $(NAME) clean
-	$(CC) $(CFLAGS) main.c -o main -L. -lft
-	./main
 
 bonus: $(OBJS) $(BONUS_OBJS)
 	$(AR) $(NAME) $(OBJS)  $(BONUS_OBJS)
